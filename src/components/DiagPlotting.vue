@@ -1,16 +1,29 @@
 <template>
-  <highchart :options="chartOptions"> </highchart>
+  <highcharts :options="chartOptions"> </highcharts>
 
 
 </template>
 
 <script setup>
-import {Chart as highchart} from 'highcharts-vue'
+import {reactive} from 'vue'
 
 let chartOptions;
 chartOptions =  {
+  title: {
+    text: 'Diagrama de interaccion'
+  },
   series: [{
-    data: [1, 2, 3] // sample data
+    data: [1, 2, -3] // sample data
   }]
 }
+</script>
+
+<!--Declarando la libreria como highcharts-->
+<script>
+  import {Chart} from 'highcharts-vue'
+  export default {
+    components : {
+      highcharts: Chart
+    }
+  }
 </script>
