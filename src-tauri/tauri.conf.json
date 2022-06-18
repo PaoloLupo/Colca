@@ -56,10 +56,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 720,
         "resizable": true,
         "title": "Diagcol",
-        "width": 800
+        "width": 1280,
+        "minHeight": 720,
+        "minWidth": 1280
       }
     ]
   }

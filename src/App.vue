@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import MainBar from './components/MainBar.vue';
-import ColumnGeoProps from './components/ColumnGeoProps.vue';
-import DiagPlotting from './components/DiagPlotting.vue';
+
+import PanelMenu from './components/PanelMenu.vue';
 </script>
 
 <template>
-  <main-bar class="p-0"/>
-  <ColumnGeoProps />
-  <DiagPlotting/>
+<!--  <main-bar class="p-0"/>-->
+  <div class="flex  m-1 ">
+
+  <PanelMenu />
+
+  </div>
 
 </template>
 
+<style>
+html {
+  font-size: 14px;
+}
+</style>

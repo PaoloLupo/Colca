@@ -1,6 +1,6 @@
 <div align="center">
 
-![](src-tauri/icons/Square310x310Logo.png)
+![](C:\proy\tauri\diagcol\src-tauri\icons\Square150x150Logo.png)
 # DiagCol 
 
 </div>
