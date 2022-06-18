@@ -1,11 +1,11 @@
 [package]
-name = "Colca"
+name = "colca"
 version = "0.1.0"
 description = "Un programa de calculo para columnas"
 authors = ["Paolo Cesar Guillen Lupo"]
 license = "MIT"
 repository = ""
-default-run = "Colca"
+default-run = "colca"
 edition = "2021"
 rust-version = "1.57"
 

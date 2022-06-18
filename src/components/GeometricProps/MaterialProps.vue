@@ -2,7 +2,6 @@
   <div class="flex flex-col space-y-4  ">
     <ColumnType/>
   </div>
-
 </template>
 
 <script setup>

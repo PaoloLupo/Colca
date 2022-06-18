@@ -1,5 +1,18 @@
 <template>
-  <Menu :model="items" class="basis-1/12" />
+  <div>
+    <button
+      v-for="(_,tab) in tabs"
+      :key="tab"
+      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 active:font-bold active:border-b-blue-500"
+      @click="currentTab = tab"
+      >
+      {{tab}}
+    </button>
+  </div>
+
+
+
+
   <keep-alive>
     <component :is="tabs[currentTab]" class="grow  m-5 p-5  border border-b-cyan-500  shadow-lg"/>
   </keep-alive>
@@ -7,32 +20,18 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
-import WelcomeScreen from './WelcomeScreen.vue';
-import ColumnGeoProps from './GeometricProps/ColumnGeoPropsMenu.vue';
 
+// Componentes
+import WelcomeScreen from './WelcomeScreen.vue';
+import MaterialProps from './GeometricProps/MaterialProps.vue';
+
+import {ref} from "vue";
+// Inicio predeterminado (Pagina de bienvenida)
 let currentTab = ref('WelcomeScreen')
 
 const tabs = {
   WelcomeScreen,
-  ColumnGeoProps
+  MaterialProps
 }
-
-
-const items = ref([
-  {
-    key: '0',
-    label: 'Propiedades',
-    icon: 'pi pi-fw pi-user-plus',
-    items: [{
-      key: '2_0',
-      label: 'Columna',
-      command: () => {
-        currentTab.value = 'ColumnGeoProps'
-      }
-    }],
-
-  }
-])
 
 </script>
