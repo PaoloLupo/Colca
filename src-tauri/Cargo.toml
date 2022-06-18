@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "Colca"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
+description = "Un programa de calculo para columnas"
+authors = ["Paolo Cesar Guillen Lupo"]
+license = "MIT"
 repository = ""
-default-run = "app"
+default-run = "Colca"
 edition = "2021"
 rust-version = "1.57"
 

@@ -1,7 +1,7 @@
 <div align="center">
 
 ![](C:\proy\tauri\diagcol\src-tauri\icons\Square150x150Logo.png)
-# DiagCol 
+# ColCa 
 
 </div>
 Un programa para el cálculo de diagramas de interacción de columnas cuadradas y de forma

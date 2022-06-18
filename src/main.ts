@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css';
+
 // @ts-ignore
 import Vue3Katex from "@hsorby/vue3-katex"
 import 'katex/dist/katex.min.css'

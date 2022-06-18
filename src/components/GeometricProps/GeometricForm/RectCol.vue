@@ -5,7 +5,7 @@
     <label  for="anchocol">Ancho</label>
     <InputNumber id="anchocol" suffix=" cm" showButtons mode="decimal" :min="0" :max="100" :step="5" v-model="anchocol" @update:modelValue="areacol" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"/>
     <label for="anchocol">Resultado en area {{areacolumna}} </label>
-    <div v-katex="'\\frac{a_i}{1+x} holaqe'"></div>
+    <div v-katex="'cos(x)'"></div>
   </div>
 </template>
 
