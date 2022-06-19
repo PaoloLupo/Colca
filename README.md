@@ -1,6 +1,6 @@
 <div align="center">
 
-![](C:\proy\tauri\diagcol\src-tauri\icons\Square150x150Logo.png)
+![](./src-tauri/icons/Square150x150Logo.png)
 # ColCa 
 
 </div>
