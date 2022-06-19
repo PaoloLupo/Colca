@@ -10,9 +10,6 @@
     </button>
   </div>
 
-
-
-
   <keep-alive>
     <component :is="tabs[currentTab]" class="grow  m-5 p-5  border border-b-cyan-500  shadow-lg"/>
   </keep-alive>
@@ -23,7 +20,7 @@
 
 // Componentes
 import WelcomeScreen from './WelcomeScreen.vue';
-import MaterialProps from './GeometricProps/MaterialProps.vue';
+import MaterialProps from './MaterialProps/MaterialProps.vue';
 
 import {ref} from "vue";
 // Inicio predeterminado (Pagina de bienvenida)

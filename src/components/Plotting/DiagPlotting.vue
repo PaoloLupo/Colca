@@ -9,7 +9,7 @@
 
 <script setup>
 
-import {reactive, ref, watch} from 'vue'
+import {ref, watch} from 'vue'
 
 const points= ref([10, 0, 8, 2, 6, 4, 5, 5])
 
