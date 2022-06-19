@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-row space-x-4 items-center">
-    <label for="alturacol">Altura</label>
-    <NumberInput min="0" max="100" step="5" v-model.number="alturacol" @update:modelValue="areacol"/>
-    <label  for="anchocol">Ancho</label>
-    <NumberInput min="0" max="100" step="5" v-model.number="anchocol" @update:modelValue="areacol"/>
+<!-- Las dimensiones estan en cm-->
+<!-- TODO Colocar un sufijo de cm para mejor vizualizacion-->
+    <NumberInput min="0" max="100" step="5" v-model.number="alturacol" @update:modelValue="areacol" name="Altura" units="kN/m2"/>
+    <NumberInput min="0" max="100" step="5" v-model.number="anchocol" @update:modelValue="areacol" name="Ancho" units="cm"/>
     <label for="anchocol">Resultado en area {{ areacolumna }} </label>
   </div>
 </template>
@@ -12,12 +12,11 @@
 
 import {ref} from "vue";
 import {invoke} from "@tauri-apps/api/tauri";
-import NumberInput from "../../../StyledComponents/NumberInput.vue"
+import NumberInput from "../../../../components/StyledComponents/NumberInput.vue"
 
-const alturacol  = ref(0)
-const anchocol = ref(0)
-const areacolumna = ref(0)
-const lol = ref(0)
+const alturacol  = ref()
+const anchocol = ref()
+const areacolumna = ref()
 
 function areacol(){
   invoke('area_colums', {altura: alturacol.value, ancho: anchocol.value}).then((area) => areacolumna.value  = area )

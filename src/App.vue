@@ -3,12 +3,6 @@
 import PanelMenu from './components/PanelMenu.vue';
 </script>
 
-<template>
+<template >
   <PanelMenu />
 </template>
-
-<style>
-html {
-  font-size: 14px;
-}
-</style>
