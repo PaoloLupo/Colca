@@ -11,7 +11,7 @@
   </div>
 
   <keep-alive>
-    <component :is="tabs[currentTab]" class="grow  m-5 p-5  border border-b-cyan-500  shadow-lg"/>
+    <component :is="tabs[currentTab]" />
   </keep-alive>
 
 </template>
@@ -28,7 +28,7 @@ let currentTab = ref('WelcomeScreen')
 
 const tabs = {
   WelcomeScreen,
-  MaterialProps
+  MaterialProps,
 }
 
 </script>

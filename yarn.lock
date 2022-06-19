@@ -646,6 +646,11 @@ katex@^0.16.0:
   dependencies:
     commander "^8.0.0"
 
+konva@^8.3.9:
+  version "8.3.9"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-8.3.9.tgz#9c22d0e75025441f552c9687dc81e873b4876cfc"
+  integrity sha512-vZ7f4Y1LMMOkvfFCGoHt0CoanKdpv81gZC4Q4pnIBO6vHEBx+1KBdH6NR5ORd+HOkGwkRXTVPbFokrYkBSWo1g==
+
 lilconfig@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.5.tgz#19e57fd06ccc3848fd1891655b5a447092225b25"
@@ -912,6 +917,11 @@ vite@^2.9.9:
     rollup "^2.59.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-konva@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vue-konva/-/vue-konva-3.0.0.tgz#b70664b06a33272c5d22219ddee0318601fd46ff"
+  integrity sha512-3psMFPEyT9f9GjQFLd8BuSA8/DDYeWUHiV7Rd4iZMIIbNsI7esF0E27H9918Ukfz7XygRbV0SLIDS/ebTMJD0g==
 
 vue-tsc@^0.34.7:
   version "0.34.17"

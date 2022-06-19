@@ -16,7 +16,9 @@
     "highcharts": "^10.1.0",
     "highcharts-vue": "^1.4.0",
     "katex": "^0.16.0",
-    "vue": "^3.2.25"
+    "konva": "^8.3.9",
+    "vue": "^3.2.25",
+    "vue-konva": "^3.0.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0",

@@ -1,24 +1,28 @@
 <template>
-  <h1 class="text-xl font-bold text-sky-600">Tipo de columna</h1>
+  <div class="m-2 p-2 shadow-inner ">
+    <h1 class="text-xl font-bold text-sky-600">Tipo de columna</h1>
 
-  <Listbox v-model="selectedColType" >
-    <ListboxButton>{{ selectedColType.name }}</ListboxButton>
-    <ListboxOptions >
-      <ListboxOption
-          v-for="colType in colTypes"
-          :key="colType"
-          :value="colType"
-          :disabled="colType.unavailable"
-      >
-        {{ colType.name }}
-      </ListboxOption>
-    </ListboxOptions >
-  </Listbox>
+    <Listbox v-model="selectedColType" >
+      <ListboxButton>{{ selectedColType.name }}</ListboxButton>
+      <ListboxOptions >
+        <ListboxOption
+            v-for="colType in colTypes"
+            :key="colType"
+            :value="colType"
+            :disabled="colType.unavailable"
+        >
+          {{ colType.name }}
+        </ListboxOption>
+      </ListboxOptions >
+    </Listbox>
 
-  <h1 class="font-bold text-sky-600">Dimensiones de columna </h1>
-  <keep-alive>
-    <component :is="listShapeComponents[selectedColType.id]"/>
-  </keep-alive>
+    <h1 class="font-bold text-sky-600">Dimensiones de columna </h1>
+    <keep-alive>
+      <component :is="listShapeComponents[selectedColType.id]"/>
+    </keep-alive>
+  </div>
+
+
 </template>
 
 <script setup>
