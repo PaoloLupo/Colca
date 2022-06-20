@@ -3,5 +3,7 @@ import PanelMenu from './components/PanelMenu.vue';
 </script>
 
 <template >
-  <PanelMenu />
+  <div class="font-sans">
+    <PanelMenu/>
+  </div>
 </template>

@@ -22,7 +22,7 @@
 
 
 defineProps({
-  name : String,
+  title : String,
   units: String,
   modelValue:Number,
 })

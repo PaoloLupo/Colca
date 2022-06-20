@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -7,7 +8,11 @@ module.exports = {
       "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'sans': ['Opens Sans', ...defaultTheme.fontFamily.sans],
+        },
+    },
   },
   plugins: [
       require('flowbite/plugin'),

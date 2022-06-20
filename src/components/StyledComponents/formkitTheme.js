@@ -8,7 +8,7 @@ const textClassification = {
     formkit-invalid:border-red-500
     rounded-lg mb-1
     overflow-hidden
-    focus-within:border-blue-500
+    focus-within:border-green-500
   `,
     input: 'w-full h-10 px-3 border-none text-base text-gray-700 placeholder-gray-400',
 }
@@ -22,7 +22,7 @@ const boxClassification = {
 }
 const buttonClassification = {
     wrapper: 'mb-1',
-    input: 'bg-blue-500 hover:bg-blue-700 text-white text-sm font-normal py-3 px-5 rounded'
+    input: 'bg-blue-500 hover:bg-green-700 text-white text-sm font-normal py-3 px-5 rounded'
 }
 
 // export our definitions using our above

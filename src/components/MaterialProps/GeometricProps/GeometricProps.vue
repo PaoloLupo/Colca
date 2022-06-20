@@ -1,9 +1,9 @@
 <template>
-  <div class="m-2 p-2 shadow-inner ">
+  <div class="m-2 p-2  ">
     <h1 class="text-xl font-bold text-sky-600">Tipo de columna</h1>
 
     <Listbox v-model="selectedColType" >
-      <ListboxButton>{{ selectedColType.name }}</ListboxButton>
+      <ListboxButton>{{ selectedColType.title }}</ListboxButton>
       <ListboxOptions >
         <ListboxOption
             v-for="colType in colTypes"
@@ -11,7 +11,7 @@
             :value="colType"
             :disabled="colType.unavailable"
         >
-          {{ colType.name }}
+          {{ colType.title }}
         </ListboxOption>
       </ListboxOptions >
     </Listbox>
@@ -32,7 +32,6 @@ import {
   ListboxButton,
   ListboxOptions,
   ListboxOption,
-  ListboxLabel,
 } from '@headlessui/vue';
 
 import InvalidGeoSelect from "./GeometricShape/InvalidGeoSelect.vue";
@@ -45,11 +44,15 @@ const listShapeComponents = [
 ]
 
 const colTypes = [
-  { id: 0, name: 'Rectangular', unavailable: false },
-  { id: 1, name: 'Circular', unavailable: false},
-  { id: 2, name: 'T', unavailable: false},
+  { id: 0, title: 'Rectangular', unavailable: false },
+  { id: 1, title: 'Circular', unavailable: false},
+  { id: 2, title: 'T', unavailable: false},
 ]
 let selectedColType = ref(colTypes[0])
 
 
 </script>
+
+<style scoped lang="postcss">
+
+</style>
