@@ -1,4 +1,7 @@
-@import './assets/fonts/fonts.css';
+@import "./assets/fonts/fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+h1 {
+  @apply text-xl font-medium text-white p-4;
+}

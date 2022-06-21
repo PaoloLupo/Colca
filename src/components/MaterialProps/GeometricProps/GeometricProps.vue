@@ -1,58 +1,35 @@
 <template>
-  <div class="m-2 p-2  ">
-    <h1 class="text-xl font-bold text-sky-600">Tipo de columna</h1>
+  <h1>Tipo de columna</h1>
+  <FormKit
+    type="select"
+    label="Tipo de columna"
+    name="columnGeoType"
+    placeholder="Escoja el tipo de columna"
+    v-model="columnGeoType"
+    :options="colTypes"
+    sufix="hola"
+  />
 
-    <Listbox v-model="selectedColType" >
-      <ListboxButton>{{ selectedColType.title }}</ListboxButton>
-      <ListboxOptions >
-        <ListboxOption
-            v-for="colType in colTypes"
-            :key="colType"
-            :value="colType"
-            :disabled="colType.unavailable"
-        >
-          {{ colType.title }}
-        </ListboxOption>
-      </ListboxOptions >
-    </Listbox>
+  <h1>Dimensiones de columna</h1>
 
-    <h1 class="font-bold text-sky-600">Dimensiones de columna </h1>
-    <keep-alive>
-      <component :is="listShapeComponents[selectedColType.id]"/>
-    </keep-alive>
-  </div>
-
-
+  <keep-alive>
+    <component :is="listShapeComponents[columnGeoType]" />
+  </keep-alive>
 </template>
 
 <script setup>
-import {ref} from "vue";
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-} from '@headlessui/vue';
+import { ref } from "vue";
 
 import InvalidGeoSelect from "./GeometricShape/InvalidGeoSelect.vue";
 import RectCol from "./GeometricShape/RectCol.vue";
 
-const listShapeComponents = [
-    RectCol,
-    InvalidGeoSelect,
-    InvalidGeoSelect,
-]
+const listShapeComponents = [RectCol, InvalidGeoSelect, InvalidGeoSelect];
 
 const colTypes = [
-  { id: 0, title: 'Rectangular', unavailable: false },
-  { id: 1, title: 'Circular', unavailable: false},
-  { id: 2, title: 'T', unavailable: false},
-]
-let selectedColType = ref(colTypes[0])
+  { label: "Rectangular", value: 0 },
+  { label: "Circular", value: 1 },
+  { label: "T", value: 2 },
+];
 
-
+const columnGeoType = ref([0]);
 </script>
-
-<style scoped lang="postcss">
-
-</style>
