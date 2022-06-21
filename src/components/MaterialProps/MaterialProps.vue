@@ -1,20 +1,26 @@
 <template>
-  <div class="flex flex-row space-x-5">
-    <div class="basis-9/12 flex-col space-y-4 ">
-      <component v-for="(_,component) in materialPropsComponents" :is="materialPropsComponents[component]" />
-    </div>
-    <Canvas/>
+  <div id="layout">
+    <component
+      v-for="(_, component) in materialPropsComponents"
+      :is="materialPropsComponents[component]"
+    />
   </div>
-
 </template>
 
 <script setup>
 import GeometricProps from "./GeometricProps/GeometricProps.vue";
 import ConcreteProps from "./ConcreteProps/ConcreteProps.vue";
-import Canvas from '../Canvas/Canvas.vue';
 
 const materialPropsComponents = {
   GeometricProps,
-  ConcreteProps
-}
+  ConcreteProps,
+};
 </script>
+
+<style scoped lang="postcss"></style>
+
+<style scoped lang="postcss">
+#layout {
+  @apply row-span-2 col-span-4 px-5 bg-violet-light;
+}
+</style>

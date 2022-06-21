@@ -4,9 +4,9 @@
       v-for="tab in listTabs"
       :key="tab"
       :class="{
-        'rightTab': isRightTab(tab.id),
-        'selected': isSelected(tab.id),
-        'leftTab': isLeftTab(tab.id),
+        rightTab: isRightTab(tab.id),
+        selected: isSelected(tab.id),
+        leftTab: isLeftTab(tab.id),
       }"
       @click="selectedTab = tab"
     >
@@ -20,47 +20,43 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 // Componentes
-import WelcomeScreen from './WelcomeScreen.vue';
-import MaterialProps from './MaterialProps/MaterialProps.vue';
-import DiagPlotting from './Plotting/DiagPlotting.vue';
+import WelcomeScreen from "./WelcomeScreen.vue";
+import MaterialProps from "./MaterialProps/MaterialProps.vue";
+import DiagPlotting from "./Plotting/DiagPlotting.vue";
 
-const tabs = [
-    WelcomeScreen,
-    MaterialProps,
-    DiagPlotting,
-]
+const tabs = [WelcomeScreen, MaterialProps, DiagPlotting];
 
 const listTabs = [
-  { id: 0, title: 'Home'},
-  { id: 1, title: 'Propiedades'},
-  { id: 2, title: 'Diagrama'},
-]
+  { id: 0, title: "Home" },
+  { id: 1, title: "Propiedades" },
+  { id: 2, title: "Diagrama" },
+];
 
-const selectedTab = ref(listTabs[0])
+const selectedTab = ref(listTabs[0]);
 
 //  Formating tabs
 const isRightTab = (index: number) => {
-  return index === 0
-}
+  return index === 0;
+};
 
 const isSelected = (index: number) => {
-  return index === selectedTab.value.id
-}
+  return index === selectedTab.value.id;
+};
 
 const isLeftTab = (index: number) => {
-  return index === tabs.length - 1
-}
+  return index === tabs.length - 1;
+};
 </script>
 
 <style scoped lang="postcss">
 #tabs {
-  @apply flex p-2 items-center
+  @apply col-span-5 row-span-1;
 }
 
 button {
-  @apply py-[10px] sm:py-2 my-1 px-[12px] sm:px-6 inline-flex font-medium border border-gray-300 text-center text-black sm:text-base  bg-white hover:ring-2 hover:ring-green-200;
+  @apply py-[10px] sm:py-2 my-1 px-[12px] sm:px-6 inline-flex font-bold border-violet-light text-center text-white  bg-violet-light hover:ring-green-dark;
 }
 
 button.rightTab {
@@ -68,7 +64,7 @@ button.rightTab {
 }
 
 button.selected {
-  @apply border-green-500 bg-green-500 text-white;
+  @apply border border-red bg-orange text-white;
 }
 
 button.leftTab {

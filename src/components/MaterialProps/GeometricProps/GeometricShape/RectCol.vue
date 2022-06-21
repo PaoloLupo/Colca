@@ -1,23 +1,60 @@
 <template>
-  <div class="flex flex-row space-x-4 items-center">
-    <NumberInput min="0" max="100" step="5" v-model.number="alturacol" @update:modelValue="areacol" name="Altura" units="kN/m2"/>
-    <NumberInput min="0" max="100" step="5" v-model.number="anchocol" @update:modelValue="areacol" name="Ancho" units="cm"/>
-    <label for="anchocol">Resultado en area {{ areacolumna }} </label>
+  <div class="flex flex-row gap-4">
+    <FormKit type="group" v-model="rectCol">
+      <FormKit
+          type="number"
+          name="altura"
+          label="altura (cm)"
+          min="0"
+          max="100"
+          step="5"
+          :plugins="[castNumber]"
+          @update:modelValue="areacol"
+      />
+      <FormKit
+          type="number"
+          name="ancho"
+          label="ancho (cm)"
+          min="0"
+          max="100"
+          step="5"
+          :plugins="[castNumber]"
+      />
+    </FormKit>
+    <pre wrap>
+      {{rectCol.altura}}
+      {{rectCol}}
+
+    </pre>
+
+    <label >Resultado en area {{ areacolumna }}</label>
   </div>
 </template>
 
-<script setup >
+<script setup>
+import { ref } from "vue";
+import { invoke } from "@tauri-apps/api/tauri";
+// @update:modelValue="areacol"
 
-import {ref} from "vue";
-import {invoke} from "@tauri-apps/api/tauri";
-import NumberInput from "../../../../components/StyledComponents/NumberInput.vue"
+const rectCol = ref({})
 
-const alturacol  = ref()
-const anchocol = ref()
-const areacolumna = ref()
+const areacolumna = ref();
 
-function areacol(){
-  invoke('area_colums', {altura: alturacol.value, ancho: anchocol.value}).then((area) => areacolumna.value  = area )
+
+function areacol() {
+  invoke("area_colums", {
+    altura: rectCol.value.altura,
+    ancho: rectCol.value.ancho,
+  }).then((area) => (areacolumna.value = area));
 }
+
+const castNumber = (node) => {
+  node.hook.input((value, next) => next(Number(value)))
+}
+
+const callRust = (node) => {
+
+}
+
 
 </script>

@@ -89,11 +89,6 @@
     "@formkit/utils" "1.0.0-beta.8"
     "@formkit/validation" "1.0.0-beta.8"
 
-"@headlessui/vue@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.6.4.tgz#8492bbb044a9b19ee92bef9cd4d0c3d8feed8588"
-  integrity sha512-axZMcfRLNuwHESPMgDb0Vj7xxlNPmsPl77pvoRZGzJh7lRdRic9kC/qbVM8G36OpIJRZzqrlADLQ2JIObhQjBg==
-
 "@hsorby/vue3-katex@^0.6.0-rc.3":
   version "0.6.0-rc.3"
   resolved "https://registry.yarnpkg.com/@hsorby/vue3-katex/-/vue3-katex-0.6.0-rc.3.tgz#b59222a18172c036bdfffcecf24ca0c8278ea5cb"
@@ -101,6 +96,11 @@
   dependencies:
     core-js "^3.8.3"
     deepmerge "^4.2.2"
+
+"@interactjs/types@1.10.14":
+  version "1.10.14"
+  resolved "https://registry.yarnpkg.com/@interactjs/types/-/types-1.10.14.tgz#0466d8f3c3681554a55bb09fc5d4ccc3ef4e5cf5"
+  integrity sha512-ds6wAI9aDzojzr7UBvifUJIgogCL1ZL0nfBrXDv5GVMaW7gBglqejaeiQ1a0cRiHII/8p8s5AwPhhODTDM8RCQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -122,11 +122,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@popperjs/core@^2.9.3":
-  version "2.11.5"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
-  integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
 
 "@tauri-apps/api@^1.0.1":
   version "1.0.1"
@@ -636,14 +631,6 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flowbite@^1.4.7:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-1.4.7.tgz#c7f117441f6755f03f39a151e3274050bffaf32a"
-  integrity sha512-/U0gOIY9RFlMWEMAVnjZpVYzSG0uEDlZ0kLCuTURukXSxqkWi3xulqooPlfmf2aw0wEMJy7d/IWEm3DntP4aUw==
-  dependencies:
-    "@popperjs/core" "^2.9.3"
-    mini-svg-data-uri "^1.4.3"
-
 fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
@@ -689,6 +676,13 @@ highcharts@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-10.1.0.tgz#561872ae8ea819131d78949136d05bcaaa99108b"
   integrity sha512-gW/pzy/Qy/hiYeCflYHpwgsP2nqQavwuRUswRf+papmbutZ3I7K7AIZJ/yZ9NL5yzpF7X7r2dX7/nzZGN4A1rg==
+
+interactjs@^1.10.14:
+  version "1.10.14"
+  resolved "https://registry.yarnpkg.com/interactjs/-/interactjs-1.10.14.tgz#9357fa8053ec00fb0533f3da47b646a742c23151"
+  integrity sha512-UhwZhuFqmKLSJ1o04LlvFMdxohwvuMjVrQC96TI8/dEhF/dS47Tqm3Po5i4yKXaCMIqI8qdvmyfeIWdGLYSClA==
+  dependencies:
+    "@interactjs/types" "1.10.14"
 
 is-binary-path@~2.1.0:
   version "2.1.0"
@@ -757,11 +751,6 @@ micromatch@^4.0.4:
   dependencies:
     braces "^3.0.2"
     picomatch "^2.3.1"
-
-mini-svg-data-uri@^1.4.3:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
-  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimist@^1.2.6:
   version "1.2.6"
@@ -865,6 +854,16 @@ postcss@^8.1.10, postcss@^8.4.13, postcss@^8.4.14:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+prettier-plugin-tailwindcss@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.11.tgz#6112da68d9d022b7f896d35c070464931c99c35f"
+  integrity sha512-a28+1jvpIZQdZ/W97wOXb6VqI762MKE/TxMMuibMEHhyYsSxQA8Ek30KObd5kJI2HF1ldtSYprFayXJXi3pz8Q==
+
+prettier@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
