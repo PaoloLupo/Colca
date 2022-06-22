@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row gap-4">
-    <FormKit type="group" v-model="rectCol">
+    <FormKit type="group" v-model="rectCol" @update:modelValue="areacol">
       <FormKit
           type="number"
           name="altura"
@@ -9,7 +9,6 @@
           max="100"
           step="5"
           :plugins="[castNumber]"
-          @update:modelValue="areacol"
       />
       <FormKit
           type="number"
@@ -21,11 +20,6 @@
           :plugins="[castNumber]"
       />
     </FormKit>
-    <pre wrap>
-      {{rectCol.altura}}
-      {{rectCol}}
-
-    </pre>
 
     <label >Resultado en area {{ areacolumna }}</label>
   </div>
@@ -34,12 +28,11 @@
 <script setup>
 import { ref } from "vue";
 import { invoke } from "@tauri-apps/api/tauri";
-// @update:modelValue="areacol"
+
 
 const rectCol = ref({})
 
 const areacolumna = ref();
-
 
 function areacol() {
   invoke("area_colums", {
@@ -48,12 +41,9 @@ function areacol() {
   }).then((area) => (areacolumna.value = area));
 }
 
+
 const castNumber = (node) => {
   node.hook.input((value, next) => next(Number(value)))
-}
-
-const callRust = (node) => {
-
 }
 
 

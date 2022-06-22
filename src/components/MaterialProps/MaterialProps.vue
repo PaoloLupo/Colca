@@ -21,6 +21,6 @@ const materialPropsComponents = {
 
 <style scoped lang="postcss">
 #layout {
-  @apply row-span-2 col-span-4 px-5 bg-violet-light;
+  @apply col-span-4 row-span-2 bg-violet-light px-5;
 }
 </style>
