@@ -8,6 +8,6 @@
 
 <style scoped lang="postcss">
 #welcomeScreen {
-  @apply row-span-2 col-span-5;
+  @apply grid-in-main row-start-main row-end-footer;
 }
 </style>

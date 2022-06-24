@@ -1,7 +1,7 @@
 const textClassification = {
   wrapper: "relative flex flex-auto",
   label:
-    " absolute bg-orange rounded-full block px-2 mb-1 -top-2  font-light text-sm formkit-invalid:text-red-500 text-white ",
+    " absolute bg-orange rounded-full block px-1 mb-1 -top-2  formkit-invalid:text-red-500 text-white ",
   inner: `
     max-w-md
     border

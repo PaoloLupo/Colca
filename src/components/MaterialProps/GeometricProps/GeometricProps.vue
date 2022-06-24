@@ -7,7 +7,6 @@
     placeholder="Escoja el tipo de columna"
     v-model="columnGeoType"
     :options="colTypes"
-    sufix="hola"
   />
 
   <h1>Dimensiones de columna</h1>

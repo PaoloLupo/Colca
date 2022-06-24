@@ -37,10 +37,21 @@ module.exports = {
       fontFamily: {
         sans: ["Opens Sans", ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateAreas: {
+        layout: [
+          "header header header header",
+          "main main main canvas",
+          "main main main canvas",
+          "footer footer footer footer",
+        ],
+      },
+      gridTemplateColumns: {
+        layout: "repeat(4, minmax(0, 1fr))",
+      },
       gridTemplateRows: {
-        layout: "50px 4fr 4fr 25px",
+        layout: "50px 4fr 4fr 32px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };

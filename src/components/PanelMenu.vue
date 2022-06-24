@@ -52,7 +52,7 @@ const isLeftTab = (index: number) => {
 
 <style scoped lang="postcss">
 #tabs {
-  @apply col-span-5 row-span-1;
+  @apply grid-in-header;
 }
 
 button {
