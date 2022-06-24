@@ -1,18 +1,17 @@
 const textClassification = {
-  wrapper: "relative flex flex-auto",
+  wrapper: " flex flex-auto",
   label:
-    " absolute bg-orange rounded-full block px-1 mb-1 -top-2  formkit-invalid:text-red-500 text-white ",
+    "flex items-center justify-center bg-red  block px-1 formkit-invalid:text-red-500 text-white ",
   inner: `
     max-w-md
     border
-    border-gray
+    border-orange
     formkit-invalid:border-red
-    rounded-lg mb-1
     overflow-hidden
     focus-within:border-orange
   `,
   input:
-    "w-full h-10 px-3 border-none text-base text-white placeholder-violet bg-violet-light",
+    " h-10 px-3 w-24 border-none text-base text-white placeholder-violet bg-violet",
 };
 const boxClassification = {
   fieldset: "max-w-md border border-gray-400 rounded-md px-2 pb-1",

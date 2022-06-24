@@ -1,21 +1,6 @@
-<template>
-  <div id="layout">
-    <component
-      v-for="(_, component) in materialPropsComponents"
-      :is="materialPropsComponents[component]"
-    />
-  </div>
-</template>
+<template></template>
 
-<script setup>
-import GeometricProps from "./GeometricProps/GeometricProps.vue";
-import ConcreteProps from "./ConcreteProps/ConcreteProps.vue";
-
-const materialPropsComponents = {
-  GeometricProps,
-  ConcreteProps,
-};
-</script>
+<script setup></script>
 
 <style scoped lang="postcss"></style>
 

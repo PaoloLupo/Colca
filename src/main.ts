@@ -9,12 +9,13 @@ import { plugin, defaultConfig } from "@formkit/vue";
 import VueKonva from "vue-konva"; // Libreria Canvas
 
 // @ts-ignore
-// import Vue3Katex from "@hsorby/vue3-katex"
-// import 'katex/dist/katex.min.css'
+import Vue3Katex from "@hsorby/vue3-katex";
+import "katex/dist/katex.min.css";
 
 const app = createApp(App);
 
 app.use(VueKonva);
+app.use(Vue3Katex);
 app.use(plugin, defaultConfig(config));
 
 app.mount("#app");

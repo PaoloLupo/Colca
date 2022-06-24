@@ -22,14 +22,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
 // Componentes
-import WelcomeScreen from "./WelcomeScreen.vue";
+import AxialDesign from "./AxialDesign.vue";
 import MaterialProps from "./MaterialProps/MaterialProps.vue";
 import DiagPlotting from "./Plotting/DiagPlotting.vue";
 
-const tabs = [WelcomeScreen, MaterialProps, DiagPlotting];
+const tabs = [AxialDesign, MaterialProps, DiagPlotting];
 
 const listTabs = [
-  { id: 0, title: "Home" },
+  { id: 0, title: "Axial" },
   { id: 1, title: "Propiedades" },
   { id: 2, title: "Diagrama" },
 ];
@@ -56,7 +56,7 @@ const isLeftTab = (index: number) => {
 }
 
 button {
-  @apply py-[10px] sm:py-2 my-1 px-[12px] sm:px-6 inline-flex font-bold border-violet-light text-center text-white  bg-violet-light hover:ring-green-dark;
+  @apply my-1 inline-flex border-violet-light bg-violet-light py-[10px] px-[12px] text-center font-bold text-white hover:ring-green-dark  sm:py-2 sm:px-6;
 }
 
 button.rightTab {
