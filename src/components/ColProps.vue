@@ -1,18 +1,21 @@
 <template>
   <div
-    class="justify-middle flex flex-row bg-blue-dark grid-in-footer row-start-footer"
+    class="justify-middle flex flex-row bg-white bg-opacity-10 grid-in-footer row-start-footer"
   >
     <FormKit type="group" v-model="colProps" @update:modelValue="areacol">
       <FormKitSchema :schema="schemaStatusBar" :data="props" />
+      <Button class="object-right">locked</Button>
     </FormKit>
   </div>
-  {{ colProps }}
 
   <Canvas />
+
+  <PanelMenu />
 </template>
 
 <script setup lang="ts">
 import { ref, provide } from "vue";
+import PanelMenu from "./PanelMenu.vue";
 import Canvas from "./Canvas/Canvas.vue";
 
 const colT = [

@@ -34,9 +34,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["Opens Sans", ...defaultTheme.fontFamily.sans],
-      },
       gridTemplateAreas: {
         layout: [
           "header header header header",

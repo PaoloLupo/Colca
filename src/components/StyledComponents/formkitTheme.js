@@ -1,7 +1,7 @@
 const textClassification = {
   wrapper: " flex flex-auto",
   label:
-    "flex items-center justify-center bg-red  block px-1 formkit-invalid:text-red-500 text-white ",
+    "flex items-center justify-center bg-orange  block px-1 formkit-invalid:text-red-500 text-white ",
   inner: `
     max-w-md
     border
@@ -10,8 +10,7 @@ const textClassification = {
     overflow-hidden
     focus-within:border-orange
   `,
-  input:
-    " h-10 px-3 w-24 border-none text-base text-white placeholder-violet bg-violet",
+  input: " h-10 px-3 w-24 border-none text-base  placeholder-violet bg-white",
 };
 const boxClassification = {
   fieldset: "max-w-md border border-gray-400 rounded-md px-2 pb-1",

@@ -52,22 +52,22 @@ const isLeftTab = (index: number) => {
 
 <style scoped lang="postcss">
 #tabs {
-  @apply grid-in-header;
+  @apply mx-2 grid-in-header;
 }
 
 button {
-  @apply my-1 inline-flex border-violet-light bg-violet-light py-[10px] px-[12px] text-center font-bold text-white hover:ring-green-dark  sm:py-2 sm:px-6;
+  @apply text-center  text-white sm:py-2 sm:px-6;
 }
 
 button.rightTab {
-  @apply rounded-l-lg;
+  @apply rounded-l;
 }
 
 button.selected {
-  @apply border border-red bg-orange text-white;
+  @apply border  border-transparent border-b-orange bg-white bg-opacity-10 text-white;
 }
 
 button.leftTab {
-  @apply rounded-r-lg;
+  @apply rounded-r;
 }
 </style>

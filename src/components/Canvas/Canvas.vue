@@ -1,7 +1,7 @@
 <template xmlns="">
   <div ref="container">
     <div
-      class="col-span-1 row-span-1 bg-violet-light grid-in-canvas row-start-canvas col-start-canvas"
+      class="col-span-1 row-span-1 rounded bg-white bg-opacity-10 grid-in-canvas row-start-canvas col-start-canvas"
     >
       <v-stage :config="configKonva">
         <v-layer ref="stage">
