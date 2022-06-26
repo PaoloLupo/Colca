@@ -19,33 +19,31 @@
   </keep-alive>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 // Componentes
 import AxialDesign from "./AxialDesign.vue";
-import MaterialProps from "./MaterialProps/MaterialProps.vue";
-import DiagPlotting from "./Plotting/DiagPlotting.vue";
+import DiagPlotting from "./DiagPlotting.vue";
 
-const tabs = [AxialDesign, MaterialProps, DiagPlotting];
+const tabs = [AxialDesign, DiagPlotting];
 
 const listTabs = [
   { id: 0, title: "Axial" },
-  { id: 1, title: "Propiedades" },
   { id: 2, title: "Diagrama" },
 ];
 
 const selectedTab = ref(listTabs[0]);
 
 //  Formating tabs
-const isRightTab = (index: number) => {
+const isRightTab = (index) => {
   return index === 0;
 };
 
-const isSelected = (index: number) => {
+const isSelected = (index) => {
   return index === selectedTab.value.id;
 };
 
-const isLeftTab = (index: number) => {
+const isLeftTab = (index) => {
   return index === tabs.length - 1;
 };
 </script>

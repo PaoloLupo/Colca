@@ -1,5 +1,5 @@
 import { generateClasses } from "@formkit/themes";
-import formkitTheme from "./src/components/StyledComponents/formkitTheme.js";
+import formkitTheme from "./src/components/Styles/formkitTheme.js";
 
 const config = {
   config: {

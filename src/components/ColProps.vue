@@ -4,7 +4,6 @@
   >
     <FormKit type="group" v-model="colProps" @update:modelValue="areacol">
       <FormKitSchema :schema="schemaStatusBar" :data="props" />
-      <Button class="object-right">locked</Button>
     </FormKit>
   </div>
 
@@ -16,7 +15,7 @@
 <script setup lang="ts">
 import { ref, provide } from "vue";
 import PanelMenu from "./PanelMenu.vue";
-import Canvas from "./Canvas/Canvas.vue";
+import Canvas from "./Canvas.vue";
 
 const colT = [
   { label: "Rec", value: 0 },
