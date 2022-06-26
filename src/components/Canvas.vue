@@ -1,8 +1,7 @@
 <template xmlns="">
-  <div ref="container">
-    <div
-      class="col-span-1 row-span-1 rounded bg-white bg-opacity-10 grid-in-canvas row-start-canvas col-start-canvas"
-    >
+  <div ref="container" class="space-y-2 grid-in-canvas">
+    <h1>Canvas</h1>
+    <div class="rounded bg-white bg-opacity-5">
       <v-stage :config="configKonva">
         <v-layer ref="stage">
           <v-rect :config="configRect" ref="rect"></v-rect>
@@ -10,7 +9,6 @@
       </v-stage>
     </div>
   </div>
-  <button @click="changeDim">Add Circle</button>
 </template>
 
 <script setup>

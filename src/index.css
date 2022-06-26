@@ -4,7 +4,7 @@
 @tailwind utilities;
 /* Personalizando estilos de texto */
 h1 {
-  @apply text-xl font-medium text-white p-4;
+  @apply text-xl text-white ;
 }
 h2 {
    @apply text-xl font-light text-white p-4;

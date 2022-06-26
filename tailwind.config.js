@@ -36,17 +36,18 @@ module.exports = {
     extend: {
       gridTemplateAreas: {
         layout: [
-          "header header header header",
-          "main main main canvas",
-          "main main main canvas",
-          "footer footer footer footer",
+          "sidebar main main main canvas",
+          "sidebar main main main canvas",
+          "sidebar main main main test",
+          "sidebar main main main test",
+          "footer footer footer footer footer",
         ],
       },
       gridTemplateColumns: {
-        layout: "repeat(4, minmax(0, 1fr))",
+        layout: "150px repeat(4, minmax(0, 1fr))",
       },
       gridTemplateRows: {
-        layout: "50px 4fr 4fr 32px",
+        layout: "repeat(4, minmax(0, 1fr)) 32px",
       },
     },
   },

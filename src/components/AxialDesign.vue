@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 grid-in-main">
+  <div class="space-y-2 grid-in-main">
     <h1>Dimensiones de la columna</h1>
     <div class="subcomponent">
       <katex-element
@@ -29,6 +29,6 @@ const calcDim = () => {
 
 <style scoped lang="postcss">
 div.subcomponent {
-  @apply flex flex-col items-center space-y-4  rounded bg-white bg-opacity-10 p-2;
+  @apply flex flex-col items-center  space-y-2 rounded bg-white bg-opacity-5 p-2;
 }
 </style>

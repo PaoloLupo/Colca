@@ -4,12 +4,11 @@
       v-for="tab in listTabs"
       :key="tab"
       :class="{
-        rightTab: isRightTab(tab.id),
         selected: isSelected(tab.id),
-        leftTab: isLeftTab(tab.id),
       }"
       @click="selectedTab = tab"
     >
+      <font-awesome-icon icon="fa-regular fa-square-caret-down" />
       {{ tab.title }}
     </button>
   </div>
@@ -50,22 +49,14 @@ const isLeftTab = (index) => {
 
 <style scoped lang="postcss">
 #tabs {
-  @apply mx-2 grid-in-header;
+  @apply flex flex-col  space-y-2 p-1 grid-in-sidebar;
 }
 
 button {
-  @apply text-center  text-white sm:py-2 sm:px-6;
-}
-
-button.rightTab {
-  @apply rounded-l;
+  @apply rounded text-left font-light text-white sm:py-2 sm:px-6;
 }
 
 button.selected {
-  @apply border  border-transparent border-b-orange bg-white bg-opacity-10 text-white;
-}
-
-button.leftTab {
-  @apply rounded-r;
+  @apply bg-white bg-opacity-5 text-white;
 }
 </style>

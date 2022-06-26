@@ -12,7 +12,14 @@ import VueKonva from "vue-konva"; // Libreria Canvas
 import Vue3Katex from "@hsorby/vue3-katex";
 import "katex/dist/katex.min.css";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faSquareCaretDown } from "@fortawesome/free-regular-svg-icons";
+
+library.add(faSquareCaretDown);
+
 const app = createApp(App);
+app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.use(VueKonva);
 app.use(Vue3Katex);

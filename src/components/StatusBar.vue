@@ -1,6 +1,6 @@
 <template>
   <div
-    class="justify-middle flex flex-row bg-white bg-opacity-10 grid-in-footer row-start-footer"
+    class="justify-middle flex flex-row bg-white bg-opacity-5 grid-in-footer"
   >
     <FormKit type="group" v-model="colProps" @update:modelValue="areacol">
       <FormKitSchema :schema="schemaStatusBar" :data="props" />
